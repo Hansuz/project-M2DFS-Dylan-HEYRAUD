@@ -1,5 +1,6 @@
 package com.example.marineWeather.web.controller;
 
+import com.example.marineWeather.model.MarineWeather;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,15 +18,14 @@ public class MarineWeatherController {
     @Autowired
     RestTemplate restTemplate;
 
-    /*
-    @ApiOperation(value = "Get details for weather", response = MarineWeatherController.class, tags = "getWeather")
-    @RequestMapping(value = "/Weather/{key}", method = RequestMethod.GET)
-    public String getWeather(@PathVariable String key) {
-        String response = restTemplate.exchange("http://dataservice.accuweather.com/currentconditions/v1/{key}?apikey=1S8eDxJkj8iHWAaf3XbuMAhGQMgQOEpS&language=fr-fr",
-                HttpMethod.GET, null, new ParameterizedTypeReference<String>() {}, key).getBody();
-        return response;
+    String city;
+
+    @ApiOperation(value = "Get details for marine weather in their port", response = MarineWeatherController.class, tags = "getMarineWeather")
+    @RequestMapping(value = "/MarineWeather/{city}", method = RequestMethod.GET)
+    public MarineWeather getMarineWeather(@PathVariable String city) {
+        MarineWeather marineWeather = new MarineWeather(3,"belle", "non significative", "ensoleillé", "bonne");
+        return marineWeather;
     }
-    */
 
     @Bean
     public RestTemplate restTemplate() {

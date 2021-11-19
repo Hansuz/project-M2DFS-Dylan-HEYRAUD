@@ -55,4 +55,14 @@ public class MarineWeather {
     public void setVisibility(String visibility) {
         Visibility = visibility;
     }
+
+    @Override
+    public String toString(){
+        return "{"+
+                "windForce=" + windForce +
+                ", Sea=" + Sea +
+                ", Swell=" + Swell +
+                ", Weather=" + Weather +
+                ", Visibility=" + Visibility + '}';
+    }
 }
