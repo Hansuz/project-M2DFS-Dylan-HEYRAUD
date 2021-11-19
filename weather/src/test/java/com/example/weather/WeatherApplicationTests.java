@@ -1,10 +1,10 @@
-package com.project.M2DFS.project.api;
+package com.example.weather;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class WeatherApplicationTests {
 
 	@Test
 	void contextLoads() {

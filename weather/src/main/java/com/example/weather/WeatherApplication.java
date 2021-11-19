@@ -1,13 +1,13 @@
-package com.project.M2DFS.project.api;
+package com.example.weather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class WeatherApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(WeatherApplication.class, args);
 	}
 
 }
