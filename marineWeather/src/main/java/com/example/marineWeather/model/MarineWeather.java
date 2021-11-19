@@ -2,26 +2,36 @@ package com.example.marineWeather.model;
 
 public class MarineWeather {
 
-    private int windForce;
+    private String City;
+    private int WindForce;
     private String Sea;
     private String Swell;
     private String Weather;
     private String Visibility;
 
-    public MarineWeather(int windForce, String sea, String swell, String weather, String visibility) {
-        this.windForce = windForce;
+    public MarineWeather(String city, int windForce, String sea, String swell, String weather, String visibility) {
+        City = city;
+        WindForce = windForce;
         Sea = sea;
         Swell = swell;
         Weather = weather;
         Visibility = visibility;
     }
 
+    public String getCity() {
+        return City;
+    }
+
+    public void setCity(String city) {
+        City = city;
+    }
+
     public int getWindForce() {
-        return windForce;
+        return WindForce;
     }
 
     public void setWindForce(int windForce) {
-        this.windForce = windForce;
+        WindForce = windForce;
     }
 
     public String getSea() {
@@ -59,7 +69,8 @@ public class MarineWeather {
     @Override
     public String toString(){
         return "{"+
-                "windForce=" + windForce +
+                "city=" + City +
+                ", windForce=" + WindForce +
                 ", Sea=" + Sea +
                 ", Swell=" + Swell +
                 ", Weather=" + Weather +
